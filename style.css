@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: linear-gradient(90deg, #4F46E5, #6366F1);
+    --white-color: #f4f4f4;
+    --badge-color: #dc2626;
+    --new-color: #00bcd4;
+    --text-color: #222;
+    --primary-hover: #000;
+    --radius: 10px;
+    --transition: .3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+}
+
+p {
+    font-size: 14px;
+    font-weight: var(--p-weight);
+    line-height: 1.6;
+    color: #444;
+}
+
+/* HEADER SECTION START */
+#header_start {
+    background: var(--bg-color);
+    color: var(--white-color);
+}
+
+#header_start .sale-link {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+#header_start .sale-link:hover {
+    text-decoration: underline;
+}
+
+#closeHeader-button,
+#slideText_Header {
+    background: transparent;
+    color: var(--white-color);
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#closeHeader-button:hover {
+    color: #353434;
+}
+
+/* HEADER SECTION END */
+/* //////////////////////////////////////////////////////////////////////////// */
+/* Start Navigation Section */
+/* Nav Brand Logo */
+.navbar-brand img {
+    width: 250px;
+    height: 40px;
+}
+
+/* Nav Menu Link */
+.navbar-nav .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "" !important;
+    display: none !important;
+}
+
+.navbar .dropdown-item {
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects */
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover,
+.navbar .dropdown.show>.nav-link {
+    color: var(--new-color);
+    transform: translateY(-2px);
+}
+
+/* NAVBAR ICONS */
+.navbar #nav-link-icon,
+#searchToggle {
+    color: var(--text-color) !important;
+    transition: color 0.25s ease, transform 0.25s ease;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.text-muted {
+    font-variant: small-caps;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* Show Search*/
+#searchDropdown {
+    display: none;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    animation: fadeDown 0.35s ease forwards;
+}
+
+/* Search DropDown */
+#searchDropdown input {
+    border: none;
+    width: 100%;
+    font-size: 15px;
+}
+
+#searchDropdown input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Add To Cart Icon Button  */
+#cartCount {
+    background: var(--badge-color);
+    color: var(--white-color);
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -15px;
+    right: -10px;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font: bold 16px sens-serf;
+}
+
+.cart-badge {
+    background: var(--badge-color);
+    color: var(--white-color);
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 5px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+.thankyou-box {
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    background: #e8ffe8;
+    border-left: 4px solid #00bcd4;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00bcd4;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.order-btn {
+    padding: 10px 20px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background: #00bcd4;
+}
+
+/* Navigation Section End */
+
+/* Start Hero Section */
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Product Card Section */
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 5px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.card-img-top-product {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Badges */
+.discount-Percentage,
+.New-item-badge {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discount-Percentage {
+    top: 15px;
+    left: 15px;
+    background: var(--badge-color);
+}
+
+.New-item-badge {
+    top: 70px;
+    left: 15px;
+    background: var(--new-color);
+}
+
+/* Product Text */
+.product-text {
+    font: 500 14px/1.4 Arial, sans-serif;
+    margin: 5px 0;
+    min-height: 45px;
+    /* ensures consistent card height */
+}
+
+/* Price */
+.price p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.product-price-old {
+    text-decoration: line-through;
+    color: gray;
+    font-weight: bold;
+}
+
+.product-price-new {
+    color: var(--badge-color);
+    font-weight: bold;
+}
+
+/* Buttons Inline */
+.add-to-cart-btn,
+.more-info-btn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.add-to-cart-btn {
+    background: var(--new-color);
+    color: #fff;
+    border: none;
+}
+
+.add-to-cart-btn:hover {
+    background: #222222;
+}
+
+.more-info-btn {
+    background: #222222;
+    color: var(--white-color);
+    border: 1px solid #ccc;
+}
+
+.more-info-btn:hover {
+    background: var(--new-color);
+}
+
+.modal-product-img {
+    max-height: 400px; 
+    width: auto;        
+    max-width: 100%;    
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;   
+}
+
+
+
+/* Footer Section */
+.footer-title {
+    color: #353434;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* Footer Links */
+.footer-link,
+.social-icon {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    padding: .18rem 0;
+    font-size: .95rem;
+    font-weight: lighter;
+}
+
+.card-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+/* Hover  */
+.footer-link:hover {
+    color: #1f2020;
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+/* Subscribe Button */
+.btn-subscribe {
+    background: #dc2626;
+    border: none;
+    color: #fff;
+    padding: .45rem .9rem;
+    border-radius: .35rem;
+}
+
+.btn-subscribe:hover {
+    filter: brightness(0.95);
+    background-color: #1f2020;
+    color: #fff;
+}
+
+/*mobile styles */
+@media (max-width: 576px) {
+
+    /* Start Navigation */
+    .navbar #Nav-Menu-Link {
+        font-size: 12px;
+    }
+
+    .navbar-brand img {
+        width: 100px;
+        height: auto;
+    }
+
+    .navbar .text-muted {
+        font-size: 1rem;
+    }
+
+    /* Start Hero Section  */
+    #sort-dropdown,
+    .card-collection {
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .card-title {
+        font-size: 8px;
+        font-weight: 400;
+    }
+
+    .card-img-top-product {
+        height: 200px;
+    }
+
+    .product-text {
+        font-size: 13px;
+    }
+
+    .product-price-old,
+    .product-price-new {
+        font-size: 13px;
+    }
+
+    .discount-Percentage,
+    .New-item-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .add-to-cart-btn,
+    .more-info-btn {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+/* Footer Section  */
+.footer-top {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.btn-subscribe {
+    padding-left: .6rem;
+    padding-right: .6rem;
+}
+}
